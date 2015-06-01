@@ -17,9 +17,24 @@
   "cordovaPlugins": [
     "org.apache.cordova.console",
     "com.ionic.keyboard",
-    "org.apache.cordova.device"
+    "org.apache.cordova.device",
+    "org.apache.cordova.splashscreen",
+    {
+      "locator": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git",
+      "id": "cordova-plugin-file"
+    },
+    {
+      "locator": "https://github.com/apache/cordova-plugin-file-transfer.git",
+      "id": "cordova-plugin-file-transfer"
+    },
+    {
+      "locator": "https://github.com/apache/cordova-plugin-camera.git",
+      "id": "cordova-plugin-camera"
+    },
+    {
+      "locator": "https://github.com/apache/cordova-plugin-geolocation.git",
+      "id": "cordova-plugin-geolocation"
+    }
   ],
-  "cordovaPlatforms": [
-    "android"
-  ]
+  "cordovaPlatforms": []
 }

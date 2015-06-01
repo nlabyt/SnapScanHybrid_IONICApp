@@ -6,8 +6,28 @@
     Test a simple plugin integration
 	<button ng-click="sayhello()">Cheers</button><br></br>
 
+	<button ng-click="searchscansend()">Search && Scan && Send</button><br></br>
 	<button ng-click="search()">search</button><br></br>
-	<button ng-click="scan()">scan</button><br></br>
+	<button ng-click="scanSinglePageFront()">scan Single Page</button><br></br>
+	<button ng-click="scanDoublePageFrontAndBack()">scan Double page</button><br></br>
+
+
+	<button ng-click="uploadfile()">uploadfile to server</button><br></br>
+
+	<button >No action, we auto send after scan</button><br></br>
+	<ion-list>
+      <div ng-repeat="file in files">
+        {{file}}
+      </div><br>
+      <div>
+		{{last_file}}
+      </div>
+    </ion-list>
+
+	<button ng-click="takePicture()">Take a Picture</button><br></br>
+	<div class="container">
+		<img src="" id="myImage">
+	<div>
 
   </ion-content>
 </ion-view>
