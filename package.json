@@ -34,6 +34,10 @@
     {
       "locator": "https://github.com/apache/cordova-plugin-geolocation.git",
       "id": "cordova-plugin-geolocation"
+    },
+    {
+      "locator": "https://github.com/jcjee/email-composer.git",
+      "id": "com.jcjee.plugins.emailcomposer"
     }
   ],
   "cordovaPlatforms": []

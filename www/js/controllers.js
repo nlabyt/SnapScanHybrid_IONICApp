@@ -71,6 +71,7 @@ angular.module('starter.controllers', [])
     is_scan_connected = true;
   }
   var sendToServer = function (pathFile, callbackSuccess, callbackError, callbackOnProgress){
+    console.log (pathFile);
     var filename = pathFile.substr(pathFile.lastIndexOf('/') + 1);
     console.log('filename');
     console.log(filename);
@@ -140,8 +141,20 @@ angular.module('starter.controllers', [])
         $scope.uploadfile();
     });
   }
+  var myFullScannerAction = function(callbackSuccess, callbackError){
+    var scanSnapOptions = {
+      'multipages': 'single',
+      'type': 'pdf'
+    };
+    hello.fullaction(scanSnapOptions, callbackSuccess, callbackError);
+  }
+  /* master function for launch the scan */
   var mySearchScanner = function(callbackSuccess, callbackError){
-    hello.search("search", callbackSuccess, callbackError);
+    var scanSnapOptions = {
+      'multipages': 'single',
+      'type': 'pdf'
+    };
+    hello.search(scanSnapOptions, callbackSuccess, callbackError);
   }
   var myScanScanner = function(param, callbackSuccess, callbackError){
     hello.scan(param, callbackSuccess, callbackError);
@@ -154,7 +167,10 @@ angular.module('starter.controllers', [])
       /*myScanScanner('single', function(sucess){
         console.log ('sucess myScanScanner');
         console.log (sucess);*/
+                    
                     var pathFileToUpload = scannerFiles.frontPage;
+
+
                     //send to the server the document
                     sendToServer(pathFileToUpload, function(sucess){
                       console.log ('sucess send to server');
@@ -191,7 +207,13 @@ angular.module('starter.controllers', [])
     var text = $scope.myText;
     console.log (text);
 
-    hello.greet('greet', success, failure);
+    // hello.greet('greet', success, failure);
+    var scanSnapOptions = {
+      'multipages': 'single',
+      'type': 'pdf'
+    };
+    hello.greet(scanSnapOptions, success, failure);
+
   }
 
 
